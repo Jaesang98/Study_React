@@ -1,4 +1,4 @@
-## part 1-1 React 배우기 전에 쓰는 이유부터 알아야
+##part 1-1 React 배우기 전에 쓰는 이유부터 알아야
 	1. 리액트를 쓰는 이유
 		1) single page Application을 만들 때 쓴다
 			=> 새로고침 없이 앱처럼 부드럽게 동작하는 html페이지를 만들 때 사용
@@ -9,7 +9,7 @@
 		3) 같은 문법으로 앱 개발 가능 (React Native와 유사)
 		
 		
-## part 1-2 리액트 React 설치와 개발환경 셋팅
+##part 1-2 리액트 React 설치와 개발환경 셋팅
 	1. 개발세팅
 		1) node js, vscode설치
 		2) 폴더 만든 후 파워쉘 창 열어서 npx create-react-app blog (react create app 라이브러리임)
@@ -23,7 +23,7 @@
 		- node.js 설치하면 딸려옴
 	
 	
-## part 1-3 리액트에서 레이아웃 만들 때 쓰는 JSX 문법 3개
+##part 1-3 리액트에서 레이아웃 만들 때 쓰는 JSX 문법 3개
 	1. jsx
 		- js파일에서 쓰는 html대용품
 		- 리액트는 jsx를 사용한다
@@ -36,7 +36,7 @@
 			=> -기호는 쓸 수 없음
 			
 			
-## part 1-4 중요한 데이터는 변수말고 state에 담습니다
+##part 1-4 중요한 데이터는 변수말고 state에 담습니다
 	1. 문법 
 		- return 소괄호에는 대표 태그 하나로 묶여져 있어야한다
 			=> 두개의 태그를 같이 쓸 수 없다라는 뜻
@@ -49,7 +49,7 @@
 			=> 작명1은 state에 보관했던 자료, 작명2는 state를 변경해주는 함수
 			
 			
-## part 1-5 버튼에 기능개발을 해보자 & 리액트 state변경하는 법
+##part 1-5 버튼에 기능개발을 해보자 & 리액트 state변경하는 법
 	1. warning 메시지
 		=> 뭐 만들고 안썻다 이런것들을 알려주는건데 보기싫으면 /* eslint-disable */ 이거쓰면됨
 		
@@ -63,7 +63,7 @@
 			작명2("1")
 			=> state변경함수(새로운state) 이렇게 작성을 해야 바뀜
 			
-## part 1-6 array, object state 변경하는 법
+##part 1-6 array, object state 변경하는 법
 	1. array object수정
 		1) 원본을 보존하는게 좋음
 			=> let copy = [...데이터] 이렇게 해야 카피본이 만들어짐
@@ -84,7 +84,7 @@
 		3) 자주 변경되는 것들
 		
 	
-## part 1-8 리액트 환경에서 동적인 UI 만드는 법 (모달창만들기)
+##part 1-8 리액트 환경에서 동적인 UI 만드는 법 (모달창만들기)
 	1. 동적 UI만드는 스텝
 		1) 디자인 완성
 		2) 현재 상태를 state에 저장
@@ -99,7 +99,7 @@
 	** useState는 작명, set작명 이렇게 적는게 관습이다 **
 	
 	
-## part 1-9 map : 많은 div들을 반복문으로 줄이고 싶은 충동이 들 때
+##part 1-9 map : 많은 div들을 반복문으로 줄이고 싶은 충동이 들 때
 	1. map
 		{
 			array.map (function(item, index) {
@@ -111,14 +111,14 @@
 		=> 이런 형태
 		
 		
-## part 1-10 자식이 부모의 state 가져다쓰고 싶을 때는 props
+##part 1-10 자식이 부모의 state 가져다쓰고 싶을 때는 props
 	1. props사용법
 		1) <자식컴포넌트 작명={state}>
 		2) props 파라미터 추가 후 props.작명으로 사용
 			**부모에서 자식에게만 전송이 가능 (패륜 불륜안됨)**
 			
 			
-## part 1-11 props를 응용한 상세페이지 만들기
+##part 1-11 props를 응용한 상세페이지 만들기
 	1. 상세에 데이터를 넘겨줄 때
 		- 하나의 오브젝트 or 하나의 배열만 보내거나
 		- index도 같이 보내야함
@@ -138,7 +138,7 @@
 	** state변경 시차가 있음, 그래서 변경 후 다음에 바로 콘솔찍으면 변경안된게 출력됨 **
 	
 
-## part 1-13 input 다루기 2 : 블로그 글발행 기능 만들기
+##part 1-13 input 다루기 2 : 블로그 글발행 기능 만들기
 	1. 배열에서 삭제
 		- splice (index, 1)
 		
@@ -146,7 +146,7 @@
 		- 변수.unshift(입력값)
 		
 		
-## part 1-14 class를 이용한 옛날 React 문법
+##part 1-14 class를 이용한 옛날 React 문법
 	오늘의 결론은 :
 	컴포넌트 만들 일이 있으면 class는 복잡하니까 function 씁시다. 
 	근데 개발하다보면 예전 리액트프로젝트같은거 봐야하는 경우가 있습니다.
@@ -154,7 +154,7 @@
 	고수인 척 하고 싶으면 참고로 알아둡시다. 
 	
 	
-## part 1-15 만든 리액트 사이트 build & Github Pages로 배포해보기
+##part 1-15 만든 리액트 사이트 build & Github Pages로 배포해보기
 	1. 빌드하기
 		1) npm run build 
 		2) 깃허브에서 프로젝트명..github.io 로 해줘야함
@@ -164,3 +164,34 @@
 	
 	2. 첫 페이지를 빠르게 동작시키려면
 		lazy 함수 : https://reactjs.org/docs/code-splitting.html#route-based-code-splitting
+
+-----------------------------------------------------------------
+
+##part 2-1 새로운 프로젝트 생성 & Bootstrap 사용하기
+	1. 리액트 부트스트랩 설치
+		1) npm install react-bootstrap bootstrap 
+		2) index.html 에 글로벌로하기
+			<link
+			  rel="stylesheet"
+			  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+			  crossorigin="anonymous"
+			/>
+			
+		3) import {Button} from 'react-bootstrap' 
+			=> 이런식으로 불러와야함
+			
+		** className넣어서 커스터마이징해도되니까 걱정 ㄴㄴ**
+		
+		
+##part 2-2 이미지 넣는 법 & public 폴더 이용하기
+	1. jsx에서 이미지 넣기
+		1) import로 이미지를 가져옴
+		2) style={{background : 'url(' + import로가져온이미지 + ')'}}
+		
+		or
+		
+		1) public폴더에 이미지를 넣음
+		2) /이미지이름 이렇게 적으면됨
+			=> 나중에 빌드할 떄 서브경로를 통해서 발행할 때 안먹을 수 있음;;
+				** 그래서 img같은 경우에는 <img src={process.env.PUBLIC_URL + '/logo192.png'} /> 이렇게 해주는게좋음

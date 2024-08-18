@@ -164,3 +164,48 @@
 	
 	2. 첫 페이지를 빠르게 동작시키려면
 		lazy 함수 : https://reactjs.org/docs/code-splitting.html#route-based-code-splitting
+
+-----------------------------------------------------------------
+
+## part 2-1 새로운 프로젝트 생성 & Bootstrap 사용하기
+	1. 리액트 부트스트랩 설치
+		1) npm install react-bootstrap bootstrap 
+		2) index.html 에 글로벌로하기
+			<link
+			  rel="stylesheet"
+			  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+			  crossorigin="anonymous"
+			/>
+			
+		3) import {Button} from 'react-bootstrap' 
+			=> 이런식으로 불러와야함
+			
+		** className넣어서 커스터마이징해도되니까 걱정 ㄴㄴ**
+		
+		
+## part 2-2 이미지 넣는 법 & public 폴더 이용하기
+	1. jsx에서 이미지 넣기
+		1) import로 이미지를 가져옴
+		2) style={{background : 'url(' + import로가져온이미지 + ')'}}
+		
+		or
+		
+		1) public폴더에 이미지를 넣음
+		2) /이미지이름 이렇게 적으면됨
+			=> 나중에 빌드할 떄 서브경로를 통해서 발행할 때 안먹을 수 있음;;
+				** 그래서 img같은 경우에는 <img src={process.env.PUBLIC_URL + '/logo192.png'} /> 이렇게 해주는게좋음
+
+
+## part 2-3 코드 길어지면 import export 하면 됩니다
+	1. 다른 파일의 정보를 사용하는법
+		1) 사용될 파일 export default 하기
+			=> 여러개 쓸거면 export{a,b,c} 
+		2) 사용할 페이지에서 import하기
+			=> 여거래 가져올거면 import{a,b,c}
+		3) 사용
+		
+		
+## part 2-4 저번시간 숙제 해설 (Card 컴포넌트 만들기)
+	1. 내가 한 실수
+		return () 안에 대표 태그하나 써야됌;;;

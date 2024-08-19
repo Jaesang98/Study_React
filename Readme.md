@@ -209,3 +209,128 @@
 ## part 2-4 저번시간 숙제 해설 (Card 컴포넌트 만들기)
 	1. 내가 한 실수
 		return () 안에 대표 태그하나 써야됌;;;
+
+
+## part 2-5 리액트 라우터 1 : 셋팅이랑 기본 라우팅
+	1. 페이지 나누는법
+		1) 컴포넌트를 만들어 상세페이지 내용을 만든다
+		2) 현재 기본 url에 /detail 이런식으로 접속 시 그 페이지가 보이게한다
+		or
+		react router dom 설치
+		
+	2. router
+		1) npm install react-router-dom@6 설치
+		2) index.js
+			import { BrowserRouter } from 'react-router-dom'; 선언 후 
+			APP컴포넌트를 BrowserRouter로 감싸면됨
+			
+		3) Routes Route Link를 임포트해오기
+		4) Routes>
+			<Route path="/detail" element={<div>상세페이지</div>}>
+			</Route>
+		  </Routes>
+			=> 이렇게 Route를 Routes로 감싸면됨
+			
+	3. Link
+		1) to="/경로"
+			=> 이렇게 하면 하이퍼링크같은 형식으로 이동을한다
+			
+			
+## part 2-6 리액트 라우터 2 : navigate, nested routes, outlet
+	1. useNavigate
+		- 이벤트를 발생시켜 페이지 이동을 할 때 사용
+			1) let navigate = useNavigate(); 선언
+			2) onClick(() => { navigate('/경로')})
+			
+			
+	2. 404페이지
+		Route맨 마지막에  <Route path="*" element={<div>404</div>}></Route> 이거 적으면 됨
+		
+		
+	3. nested routes
+		- 라우트 태그안에 태그가 들어간것
+			1) <Route>태그안에 Route태그 쓰기
+				<Route path="/detail">
+					<Route part="member">
+					
+					</Route>
+				</Route>
+				=> 이렇게 하면 경로 안에 경로 즉 /detail/member 이런식으로 가능
+				
+			or	
+				<Route part="/detail/member"></Route>
+				
+			2) detail 태그가 들어갈 곳에 
+				<Outlet></Outlet> 이거를 쓰면 됨
+					이거는 detail에서 member를 어디에 보여줄지를 나타내는거임
+			
+		=> 대신에 이렇게 하면 두개의 태그가 다 보임;;
+		
+		
+## part 2-7 리액트 라우터 3 : URL 파라미터로 상세페이지 100개 만들기
+	1. /detail/123
+		=> 이런식으로 url를 호출 하려면 /detail/:id 이렇게 적어야함
+		
+	2. useParams()
+		- 현재 url들의 파라미터 정보들을 받음
+		
+		
+## part 2-8 styled-components 쓰면 CSS 파일 없어도 되는데
+	1. styled-components 적용
+		1) npm install styled-components
+		2) 컴포넌트에 import styled from 'styled-components'
+		3) let Button = styled.button `
+			background : yellow `
+			<Button></Button>
+		
+			=> 이런식으로 써도됨
+			
+	2. css파일이 전염되는것을 막으려면
+		컴포넌트.module.css 이렇게 파일을 만들어야한다
+		
+		
+	**잘 안쓸듯**
+	
+
+## part 2-9 Lifecycle과 useEffect 1
+	1. useEffect
+		- mount, update시 코드를 실행해준다
+		- 아마 개발을 할 때는 2번 호출 될건데 그건 디버깅을 위해서 그런거임
+			실제 배포하면 그런일 없음
+				=> 만약 그런게 싫다면 index.js에 가서 React.StrictMode를 없애면됨
+				
+				
+	2. 사용하는 이유
+		- html렌더링 후에 동작을 한다
+	
+	3. 언제 사용
+		- 어려운 연산 or 오래걸리는 연산
+		- 서버에서 데이터를 가져올 때
+		- 타이머 장착했을 때
+		
+		
+## part 2-10 Lifecycle과 useEffect 2
+	1. useEffect 동작
+		- 기본적으로 mount update에 실행이 됨
+		- 특정값이 변경됬을 때만 실행이 되게 하려면
+			useEffect(()=> {},[특정값])
+			=> 이렇게 사용하면 된다
+			
+		- []만 넣으면 처음 mount됬을 때만 1회실행됨
+		- useEffect가 실행되기전에 코드를 실행하려면
+			return() => {
+				코드
+			}
+			=> 이렇게 useEffect안에다가 저걸 추가하면된다
+				이런건 대부분 기존 데이터를 전부 깔끔하게 지우고 새로시작할 때 사용한다
+				타이머같은 경우에는 변수에 타이머를 저장한 후 return 에 clearTimeout(변수)
+				이렇게 작성해도된다
+				
+				
+## part 2-11 리액트에서 서버와 통신하려면 ajax 1
+	1. ajax
+		1) npm install axios 
+		2) import 하기
+		3) axios.get('url쓰기').then((결과)=>{
+			console.log(결과.data)
+		  })

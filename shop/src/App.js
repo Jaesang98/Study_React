@@ -4,6 +4,7 @@ import { useState } from 'react';
 import data from './data'
 import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom';
 import Detail from './routes/detail';
+import Cart from './routes/cart'
 import axios from 'axios';
 
 function App() {
@@ -36,7 +37,6 @@ function App() {
             <button onClick={() => {
               axios.get('https://codingapple1.github.io/shop/data2.json')
               .then((결과) => {
-                console.log(결과.data)
                 let copy = [...shoes, ...결과.data];
                 setShoes(copy)
               })
@@ -47,6 +47,7 @@ function App() {
           </>
         }></Route>
         <Route path="/detail/:id" element={<Detail shoes={shoes}></Detail>}></Route>
+        <Route path="/cart" element={<Cart></Cart>}></Route>
         <Route path="*" element={<div>404</div>}></Route>
       </Routes>
     </div>

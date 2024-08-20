@@ -523,3 +523,145 @@ localStorage로 만드는 최근 본 상품 기능 1
 			</div>
 		  )
 		} 
+
+## part 2-21 localStorage로 만드는 최근 본 상품 기능 1
+	1. localStorage
+		- 사이트를 꺼도 계속해서 남아있음
+		
+		- 	사용법
+			localStorage.setItem('데이터이름', '데이터');
+			localStorage.getItem('데이터이름');
+			localStorage.removeItem('데이터이름')
+			localStorage.setItem('obj', JSON.stringify({name:'kim'}) );
+			var a = localStorage.getItem('obj');
+			var b = JSON.parse(a)
+		
+	2. sessionStorage
+		- 브라우저 끄면 날라감
+		- 사용법 로컬스토리지랑 같음
+		
+		
+## part 2-22 localStorage로 만드는 최근 본 상품 기능 2
+	1. 숙제임
+	
+	
+## part 2-23 실시간 데이터가 중요하면 react-query
+	1. react-query
+		1) npm install react-query@3
+		2) index.js
+			import { QueryClient, QueryClientProvider } from "react-query"
+			const queryClient = new QueryClient();
+			<QueryClientProvider client={queryClient}>
+				~~
+			</QueryClientProvider>
+			
+	2. 사용 이유
+		몇초마다 자동으로 데이터 다시 가져오게 하려면?
+ 		요청실패시 몇초 간격으로 재시도?
+		다음 페이지 미리가져오기?
+		ajax 성공/실패시 각각 다른 html을 보여주려면?
+		
+	
+	3. 사용법
+		let result = useQuery('작명', () =>
+			axios.get('https://codingapple1.github.io/userdata.json')
+			  .then((a) => { return a.data })
+		  )
+		  
+			{ result.isLoading && '로딩중' }
+			{ result.error && '에러남' }
+			{ result.data && result.data.name }
+			
+			
+## part 2-24 성능개선 1 : 개발자도구 & lazy import
+	1. React DevTools
+		- state, props 이런거 조회가능
+		
+	2. Profiler 성능측정 
+		- 녹화해서 이벤트 중 느린거나 기능저하시키는것 확인가능
+		
+	3. Redux DevTools
+		- Redux store에 있던 state를 전부 확인가능
+		
+	4. lazy import
+		- 필요할때만 임포트 한것을 가져옴
+		  그래서 첫 페이지 로딩속도를 향상시킬 수 있습니다.
+		  
+		 - const Cart = lazy( () => import('./routes/Cart.js') )
+		 
+		 - <Suspense fallback={ <div>로딩중임</div> }>
+			  <Detail shoes={shoes} />
+			</Suspense>
+			
+			
+## part 2-25 성능개선 2 : 재렌더링 막는 memo, useMemo
+	1. memo
+		function Child(){
+		  console.log('재렌더링됨')
+		  return <div>자식임</div>
+		}
+
+		function Cart(){ 
+
+		  let [count, setCount] = useState(0)
+
+		  return (
+			<Child />
+			<button onClick={()=>{ setCount(count+1) }}> + </button>
+		  )
+		}
+		=> <Child /> 여기에 프롭스를 전달하는 것 아닌이상 재 렌더링을 막아줌
+		** 잘 안쓴다함 ** 
+		
+		
+	2. useMemo
+		import {useMemo, useState} from 'react'
+
+		function 함수(){
+		  return 반복문10억번돌린결과
+		}
+
+		function Cart(){ 
+
+		  let result = useMemo(()=>{ return 함수() }, [])
+
+		  return (
+			<Child />
+			<button onClick={()=>{ setCount(count+1) }}> + </button>
+		  )
+		}
+		=> 컴포넌트 로드시 1회만 실행
+			dependency도 넣을 수 있어서 
+			특정 state, props가 변할 때만 실행할 수도 있습
+			
+			
+## part 2-26 성능개선 3 : useTransition, useDeferredValue
+	1. useTransition
+		- 타이핑같이 즉각 반응해야하는걸 우선적으로 처리해줌
+		
+	2. useDeferredValue
+		- startTransition() 이거랑 용도가 똑같으나  state 아니면 변수하나를 집어넣을 수 있게 되어있어
+			변수에 변동사항이 생기면 그걸 늦게 처리한다
+			
+			
+## part 2-27 PWA 셋팅해서 앱으로 발행하기 (모바일앱인척하기)
+	1. 설치
+		1)  npx create-react-app 프로젝트명 --template cra-template-pwa
+		2) index.js에서
+			serviceWorkerRegistration.unregister(); => serviceWorkerRegistration.register();
+			
+			
+## part 2-28 state 변경함수 사용할 때 주의점 : async
+	state변경함수나 뭐 서버통신하고 난 뒤에 다음 줄의 값이 수정되게 하고싶은데
+	시점차이가 생길 수 있음 그떄는 그냥 useEffect를 쓰자
+	
+	
+## part 2-29 custom hook으로 코드 재사용하기
+	1. custom hook
+		- usehook을 쓸 때는 커스텀훅도 use를 붙이는게 좋다
+		- 값을 가져오려면 return [a,b] 이렇게 쓴다
+		
+		
+## part 2-30 Node+Express 서버와 React 연동하려면
+	
+## part 2-31 React 강의 나가는 말

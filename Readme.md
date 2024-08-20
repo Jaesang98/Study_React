@@ -334,3 +334,192 @@
 		3) axios.get('url쓰기').then((결과)=>{
 			console.log(결과.data)
 		  })
+
+
+## part 2-12 리액트에서 서버와 통신하려면 ajax 2 : post, fetch
+	1. post
+		서버로 데이터 전송하는요청
+		
+	2. 여러ajax를 요청하는 방법
+		Promise.all([a,b]).then(()=> {})
+		
+		
+## part 2-13 리액트에서 탭 UI 만들기
+	1. 조건식으로 화면에 show hide하는방법
+		1) 삼항연산자
+		2) 컴포넌트 만든 후 그곳에 if문 적기
+			=> 요소를 return꼭해야함
+		3) 요소를 배열에 넣고 인덱스를 프롭스로 받아 보여줌
+		
+		
+## part 2-14 멋있게 컴포넌트 전환 애니메이션 주는 법 (transition)
+	1. transition 이거사용하면될듯
+	
+	
+## part 2-15 props 싫으면 Context API 써도 됩니다
+	1. Context API
+		- props 전송없이 state공유가능
+		- 잘안쓰는데 이유는 
+			1. state 변경시 쓸데없는 컴포넌트까지 전부 재렌더링이 되고 
+			2. useContext() 를 쓰고 있는 컴포넌트는 나중에 다른 파일에서 재사용할 때 Context를 import 하는게 귀찮아질 수 있습니다.
+			
+			
+## part 2-15 장바구니 페이지 만들기 & Redux 1 : Redux Toolkit 설치
+	1. Redux 
+		컴포넌트들이 props없이 state 공유가능
+		
+	2. 설치
+		1) react버전이 18.1.0 이상인지 확인
+		2) npm install @reduxjs/toolkit@1.8.1 react-redux 
+		3) store.js 파일 만들기
+			import { configureStore } from '@reduxjs/toolkit'
+
+			export default configureStore({
+			  reducer: { }
+			}) 
+			
+		4. index.js 수정
+			import { Provider } from "react-redux";
+			import store from './store.js'
+
+			const root = ReactDOM.createRoot(document.getElementById('root'));
+			root.render(
+			  <React.StrictMode>
+				<Provider store={store}>
+				  <BrowserRouter>
+					<App />
+				  </BrowserRouter>
+				</Provider>
+			  </React.StrictMode>
+			); 
+			
+			
+## part 2-16 Redux 2 : store에 state 보관하고 쓰는 법
+	1. redux
+		1) store.js파일 수정
+		import { configureStore, createSlice } from '@reduxjs/toolkit'
+
+		let user = createSlice({
+		  name : 'user',
+		  initialState : 'kim'
+		})
+
+		export default configureStore({
+		  reducer: {
+			user : user.reducer
+		  }
+		}) 
+		=>  name : 'state이름', initialState : 'state값'
+			{ 작명 : createSlice만든거.reducer }
+			
+		2) 사용하기
+			- import { useSelector } from 'react-redux';
+			- let a = useSelector((state) => { return state });
+			
+			
+## part 2-17 Redux 3 : store의 state 변경하는 법\
+		
+		
+localStorage로 만드는 최근 본 상품 기능 1
+	1. state변경
+		1) reducers : {
+			함수(state) {
+				return 변경
+			}
+		}
+		
+		2) export let {함수} = state의네임.action 
+			=> ex) user.action
+			
+		3) import { useDispatch, useSelector } from "react-redux"
+			import { changeName } from "./../store.js"
+			
+			let dispacth = useDispatch();
+			dispacth(함수())
+			
+		=> 이렇게 귀찮게 store에 있는 데이터를 가져와야한다
+		
+		
+## part 2-18 Redux 4 : state가 object/array일 경우 변경하는 법
+	1. redux 파라미터
+		1) 함수(state, action) 이렇게 적었을 경우
+			value는 컴포넌트에서 store.js에게 보낸 파라미터이고
+			사용은 action.payload 이렇게 가져와서 쓸 수 있다
+			
+			
+## part 2-19 Redux 5 : 장바구니 기능 만들기 숙제 & 응용문제
+	숙제임
+	
+
+## part 2-20 리액트에서 자주쓰는 if문 작성패턴 5개
+	1. 컴포넌트 안에서 쓰는 if/else
+		function Component() {
+		  if ( true ) {
+			return <p>참이면 보여줄 HTML</p>;
+		  } else {
+			return null;
+		  }
+		} 
+		
+	2. JSX안에서 쓰는 삼항연산자
+		function Component() {
+		  return (
+			<div>
+			  {
+				1 === 1
+				? <p>참이면 보여줄 HTML</p>
+				: null
+			  }
+			</div>
+		  )
+		} 
+		
+	3. && 연산자로 if 역할 대신하기
+		function Component() {
+		  return (
+			<div>
+			  {
+				1 === 1
+				? <p>참이면 보여줄 HTML</p>
+				: null
+			  }
+			</div>
+		  )
+		} 
+
+		function Component() {
+		  return (
+			<div>
+			  { 1 === 1 && <p>참이면 보여줄 HTML</p> }
+			</div>
+		  )
+		}
+		
+	4. switch / case 조건문
+		function Component2(){
+		  var user = 'seller';
+		  if (user === 'seller'){
+			return <h4>판매자 로그인</h4>
+		  } else if (user === 'customer'){
+			return <h4>구매자 로그인</h4>
+		  } else {
+			return <h4>그냥 로그인</h4>
+		  }
+		}
+		
+	5. object/array 자료형 응용 
+		function Component() {
+		  var 현재상태 = 'info';
+		  return (
+			<div>
+			  {
+				{ 
+				   info : <p>상품정보</p>,
+				   shipping : <p>배송관련</p>,
+				   refund : <p>환불약관</p>
+				}[현재상태]
+			  }
+
+			</div>
+		  )
+		} 

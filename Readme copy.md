@@ -9,8 +9,6 @@
 
     	3) 같은 문법으로 앱 개발 가능 (React Native와 유사)
 
-
-
 ## part 1-2 리액트 React 설치와 개발환경 셋팅
 
     1. 개발세팅
@@ -38,8 +36,6 @@
     	3) jsx상에서 스타일을 수정할 때 {{color : 'red', ~ }} 이런식으로 써야함
     		=> -기호는 쓸 수 없음
 
-
-
 ## part 1-4 중요한 데이터는 변수말고 state에 담습니다
 
     1. 문법
@@ -52,8 +48,6 @@
     	2) useState에 보관할 자료 적기
     	3) let [작명1, 작명2] 으로 변수 선언
     		=> 작명1은 state에 보관했던 자료, 작명2는 state를 변경해주는 함수
-
-
 
 ## part 1-5 버튼에 기능개발을 해보자 & 리액트 state변경하는 법
 
@@ -70,7 +64,6 @@
     		작명2("1")
     		=> state변경함수(새로운state) 이렇게 작성을 해야 바뀜
 
-
 ## part 1-6 array, object state 변경하는 법
 
     1. array object수정
@@ -80,7 +73,6 @@
     			그래서 그 상태에서 뭔 변경해도 배열이 바뀐거지 화살표가 바뀐게아니라
     			기존 state에서 배열을 변경하고 넣어도 값이 바뀌지 않는거임
     			... 이걸써야 화살표가 달라짐
-
 
 ## part 1-7 Component : 많은 div들을 한 단어로 줄이고 싶으면
 
@@ -93,7 +85,6 @@
     	1) 반복적인 html 축약
     	2) 큰 페이지들
     	3) 자주 변경되는 것들
-
 
 ## part 1-8 리액트 환경에서 동적인 UI 만드는 법 (모달창만들기)
 
@@ -122,16 +113,12 @@
     	}
     	=> 이런 형태
 
-
-
 ## part 1-10 자식이 부모의 state 가져다쓰고 싶을 때는 props
 
     1. props사용법
     	1) <자식컴포넌트 작명={state}>
     	2) props 파라미터 추가 후 props.작명으로 사용
     		**부모에서 자식에게만 전송이 가능 (패륜 불륜안됨)**
-
-
 
 ## part 1-11 props를 응용한 상세페이지 만들기
 
@@ -141,8 +128,6 @@
     		=> 뭐가 좋을지 상황에 맞춰서 사용하자
 
     	- 자식과 부모가 같이쓰는 state라면 부모에 올려놓고 자식이 props로 받아쓰는게 좋다
-
-
 
 ## part 1-12 input 1 : 사용자가 입력한 글 다루기
 
@@ -162,8 +147,6 @@
 
     2. 배열에서 맨 앞에 추가
     	- 변수.unshift(입력값)
-
-
 
 ## part 1-14 class를 이용한 옛날 React 문법
 
@@ -204,8 +187,6 @@
 
     	** className넣어서 커스터마이징해도되니까 걱정 ㄴㄴ**
 
-
-
 ## part 2-2 이미지 넣는 법 & public 폴더 이용하기
 
     1. jsx에서 이미지 넣기
@@ -227,8 +208,6 @@
     	2) 사용할 페이지에서 import하기
     		=> 여거래 가져올거면 import{a,b,c}
     	3) 사용
-
-
 
 ## part 2-4 저번시간 숙제 해설 (Card 컴포넌트 만들기)
 
@@ -259,8 +238,6 @@
     3. Link
     	1) to="/경로"
     		=> 이렇게 하면 하이퍼링크같은 형식으로 이동을한다
-
-
 
 ## part 2-6 리액트 라우터 2 : navigate, nested routes, outlet
 
@@ -293,8 +270,6 @@
 
     	=> 대신에 이렇게 하면 두개의 태그가 다 보임;;
 
-
-
 ## part 2-7 리액트 라우터 3 : URL 파라미터로 상세페이지 100개 만들기
 
     1. /detail/123
@@ -302,8 +277,6 @@
 
     2. useParams()
     	- 현재 url들의 파라미터 정보들을 받음
-
-
 
 ## part 2-8 styled-components 쓰면 CSS 파일 없어도 되는데
 
@@ -339,8 +312,6 @@
     	- 서버에서 데이터를 가져올 때
     	- 타이머 장착했을 때
 
-
-
 ## part 2-10 Lifecycle과 useEffect 2
 
     1. useEffect 동작
@@ -359,8 +330,6 @@
     			타이머같은 경우에는 변수에 타이머를 저장한 후 return 에 clearTimeout(변수)
     			이렇게 작성해도된다
 
-
-
 ## part 2-11 리액트에서 서버와 통신하려면 ajax 1
 
     1. ajax
@@ -378,8 +347,6 @@
     2. 여러ajax를 요청하는 방법
     	Promise.all([a,b]).then(()=> {})
 
-
-
 ## part 2-13 리액트에서 탭 UI 만들기
 
     1. 조건식으로 화면에 show hide하는방법
@@ -387,8 +354,6 @@
     	2) 컴포넌트 만든 후 그곳에 if문 적기
     		=> 요소를 return꼭해야함
     	3) 요소를 배열에 넣고 인덱스를 프롭스로 받아 보여줌
-
-
 
 ## part 2-14 멋있게 컴포넌트 전환 애니메이션 주는 법 (transition)
 
@@ -401,8 +366,6 @@
     	- 잘안쓰는데 이유는
     		1. state 변경시 쓸데없는 컴포넌트까지 전부 재렌더링이 되고
     		2. useContext() 를 쓰고 있는 컴포넌트는 나중에 다른 파일에서 재사용할 때 Context를 import 하는게 귀찮아질 수 있습니다.
-
-
 
 ## part 2-15 장바구니 페이지 만들기 & Redux 1 : Redux Toolkit 설치
 
@@ -434,8 +397,6 @@
     		  </React.StrictMode>
     		);
 
-
-
 ## part 2-16 Redux 2 : store에 state 보관하고 쓰는 법
 
     1. redux
@@ -459,8 +420,6 @@
     		- import { useSelector } from 'react-redux';
     		- let a = useSelector((state) => { return state });
 
-
-
 ## part 2-17 Redux 3 : store의 state 변경하는 법\
 
 localStorage로 만드는 최근 본 상품 기능 1 1. state변경 1) reducers : {
@@ -480,8 +439,6 @@ dispacth(함수())
     	1) 함수(state, action) 이렇게 적었을 경우
     		value는 컴포넌트에서 store.js에게 보낸 파라미터이고
     		사용은 action.payload 이렇게 가져와서 쓸 수 있다
-
-
 
 ## part 2-19 Redux 5 : 장바구니 기능 만들기 숙제 & 응용문제
 
@@ -578,8 +535,6 @@ dispacth(함수())
     	- 브라우저 끄면 날라감
     	- 사용법 로컬스토리지랑 같음
 
-
-
 ## part 2-22 localStorage로 만드는 최근 본 상품 기능 2
 
     1. 숙제임
@@ -605,8 +560,8 @@ let result = useQuery('작명', () =>
 axios.get('https://codingapple1.github.io/userdata.json')
 .then((a) => { return a.data })
 )
-  
- { result.isLoading && '로딩중' }
+
+{ result.isLoading && '로딩중' }
 { result.error && '에러남' }
 { result.data && result.data.name }
 
@@ -630,8 +585,6 @@ axios.get('https://codingapple1.github.io/userdata.json')
     	 - <Suspense fallback={ <div>로딩중임</div> }>
     		  <Detail shoes={shoes} />
     		</Suspense>
-
-
 
 ## part 2-25 성능개선 2 : 재렌더링 막는 memo, useMemo
 
@@ -674,8 +627,6 @@ axios.get('https://codingapple1.github.io/userdata.json')
     		dependency도 넣을 수 있어서
     		특정 state, props가 변할 때만 실행할 수도 있습
 
-
-
 ## part 2-26 성능개선 3 : useTransition, useDeferredValue
 
     1. useTransition
@@ -685,16 +636,12 @@ axios.get('https://codingapple1.github.io/userdata.json')
     	- startTransition() 이거랑 용도가 똑같으나  state 아니면 변수하나를 집어넣을 수 있게 되어있어
     		변수에 변동사항이 생기면 그걸 늦게 처리한다
 
-
-
 ## part 2-27 PWA 셋팅해서 앱으로 발행하기 (모바일앱인척하기)
 
     1. 설치
     	1)  npx create-react-app 프로젝트명 --template cra-template-pwa
     	2) index.js에서
     		serviceWorkerRegistration.unregister(); => serviceWorkerRegistration.register();
-
-
 
 ## part 2-28 state 변경함수 사용할 때 주의점 : async
 
@@ -706,8 +653,6 @@ axios.get('https://codingapple1.github.io/userdata.json')
     1. custom hook
     	- usehook을 쓸 때는 커스텀훅도 use를 붙이는게 좋다
     	- 값을 가져오려면 return [a,b] 이렇게 쓴다
-
-
 
 ## part 2-30 Node+Express 서버와 React 연동하려면
 

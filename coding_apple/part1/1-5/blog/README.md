@@ -1,16 +1,16 @@
-## part1-4 중요한 데이터는 변수말고 state에 담습니다
+## part1-5 버튼에 기능개발을 해보자 & 리액트 state변경하는 법
 
-1. jsx문법
+1. warning 메시지
 
-   - return 소괄호에는 대표 태그 하나로 묶여져 있어야한다
-     => 두개의 태그를 같이 쓸 수 없다라는 뜻
+   - 변수를 사용하지 않음 등의 자잘한 오류가 생기는 경우 나타남
+   - warning 메시지를 없애려면 제일 상단 /\* eslint-disable \*/를 작성
 
-2. useState
+2. onClick
 
-   - 값이 변경됬을 때 자동으로 html에 렌더링 되도록 하기위해 사용
-   - state를 쓰던 html은 자동 재렌더링이 된다
+   - 클릭 이벤트
+   - 함수를 호출 하는 경우 onClick= {함수}
+   - 기능을 실행 하는 경우 onClick= {()=> {기능기능}}
 
-3. useState 사용법
-   1. useState import 해오기
-   2. let [작명1, 작명2] = useState(초기데이터)
-      => 작명1은 useState에 담겨있는 데이터, 작명2는 작명1의 데이터를 변경해주는 함수
+3. state값 변경
+   - let [a, b] = useState(1) 이 있을 때 state변경함수인 b를 통해서 바꿔야한다
+   - 변경방법 : b(2)

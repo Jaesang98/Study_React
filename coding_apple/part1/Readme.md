@@ -19,3 +19,8 @@
 ## 📝 소개
 
 코딩애플 강의를 통해 배운 React 사용법을 정리한 글입니다.
+
+## 📚 참고 자료
+
+- [코딩애플 강의](https://codingapple.com/)
+- [내 깃허브](https://github.com/Jaesang98/Study_React)

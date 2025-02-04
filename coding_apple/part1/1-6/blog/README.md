@@ -1,4 +1,4 @@
-## 🔧 part1-6 array, object state 변경하는 법
+## 🔄 part1-6 array, object state 변경하는 법
 
 ### 🔹 array object수정
 

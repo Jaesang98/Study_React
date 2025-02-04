@@ -1,4 +1,4 @@
-## 🔧 part1-7 Component : 많은 div들을 한 단어로 줄이고 싶으면
+## 🧩 part1-7 Component : 많은 div들을 한 단어로 줄이고 싶으면
 
 ### 🔹 1. 컴포넌트란?
 

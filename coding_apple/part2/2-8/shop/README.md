@@ -1,4 +1,4 @@
-## 🖼 part2-8 styled-components 쓰면 CSS 파일 없어도 되는데
+## 💅 part2-8 styled-components 쓰면 CSS 파일 없어도 되는데
 
 ### 🔹 1. styled-components
 

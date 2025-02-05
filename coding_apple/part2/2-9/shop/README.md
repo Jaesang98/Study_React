@@ -1,4 +1,4 @@
-## 🖼 part2-9 Lifecycle과 useEffect 1
+## ⏳ part2-9 Lifecycle과 useEffect 1
 
 ### 🔹 1. 컴포넌트 LifeCycle
 

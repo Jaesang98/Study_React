@@ -1,4 +1,4 @@
-## 🖼 part2-6 리액트 라우터 2 : navigate, nested routes, outlet
+## 🗺️ part2-6 리액트 라우터 2 : navigate, nested routes, outlet
 
 ### 🔹 1. useNavigate
 

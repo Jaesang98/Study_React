@@ -1,4 +1,4 @@
-## 🖼 part2-3 코드 길어지면 import export 하면 됩니다
+## 📦 part2-3 코드 길어지면 import export 하면 됩니다
 
 ### 🔹 1. 다른 파일의 정보를 사용하는법
 

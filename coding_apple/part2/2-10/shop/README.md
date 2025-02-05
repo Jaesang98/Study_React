@@ -1,4 +1,4 @@
-## 🖼 part2-10 Lifecycle과 useEffect 2
+## ⚙️ part2-10 Lifecycle과 useEffect 2
 
 ### 🔹 1. useEffect 동작
 

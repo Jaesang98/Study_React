@@ -1,4 +1,4 @@
-## 🖼 part2-12 리액트에서 서버와 통신하려면 ajax 2 : post, fetch
+## 📬 part2-12 리액트에서 서버와 통신하려면 ajax 2 : post, fetch
 
 ### 🔹 1. post
 

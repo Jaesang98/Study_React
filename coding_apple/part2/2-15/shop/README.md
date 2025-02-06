@@ -1,4 +1,4 @@
-## 📬 part2-15 props 싫으면 Context API 써도 됩니다
+## 🔄 part2-15 props 싫으면 Context API 써도 됩니다
 
 ### 🔹 1. Context API
 

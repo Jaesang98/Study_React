@@ -1,4 +1,4 @@
-## 📬 part2-22 localStorage로 만드는 최근 본 상품 기능 1
+## 💾 part2-22 localStorage로 만드는 최근 본 상품 기능 1
 
 ### 🔹 1. localStorage
 

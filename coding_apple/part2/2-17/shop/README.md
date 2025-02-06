@@ -1,4 +1,4 @@
-## 📬 part2-17 Redux 2 : store에 state 보관하고 쓰는 법
+## 📦 part2-17 Redux 2 : store에 state 보관하고 쓰는 법
 
 ### 🔹 1. store.js
 

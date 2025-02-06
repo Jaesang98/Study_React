@@ -1,4 +1,4 @@
-## 📬 part2-14 멋있게 컴포넌트 전환 애니메이션 주는 법 (transition)
+## 🎭 part2-14 멋있게 컴포넌트 전환 애니메이션 주는 법 (transition)
 
 ### 🔹 1. automatic batching 기능
 

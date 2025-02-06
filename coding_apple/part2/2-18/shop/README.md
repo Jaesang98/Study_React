@@ -1,4 +1,4 @@
-## 📬 part2-18 Redux 3 : store의 state 변경하는 법
+## 🔧 part2-18 Redux 3 : store의 state 변경하는 법
 
 ### 🔹 1. store의 state변경
 

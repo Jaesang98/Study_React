@@ -1,4 +1,4 @@
-## 📬 part2-23 localStorage로 만드는 최근 본 상품 기능 2
+## 📝 part2-23 localStorage로 만드는 최근 본 상품 기능 2
 
 ### 🔹 1. 숙제임
 

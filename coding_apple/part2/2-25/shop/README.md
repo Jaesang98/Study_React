@@ -1,4 +1,4 @@
-## 📝 part2-25 성능개선 1 : 개발자도구 & lazy import
+## 🚀 part2-25 성능개선 1 : 개발자도구 & lazy import
 
 ### 🔹 1. React DevTools
 

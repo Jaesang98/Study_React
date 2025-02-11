@@ -1,4 +1,4 @@
-## 📝 part2-27 성능개선 3 : useTransition, useDeferredValue
+## ⏳ part2-27 성능개선 3 : useTransition, useDeferredValue
 
 ### 🔹 1. useTransition
 

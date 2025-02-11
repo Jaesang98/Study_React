@@ -1,4 +1,4 @@
-## 📝 part2-31 Node+Express 서버와 React 연동하려면
+## 🌐 part2-31 Node+Express 서버와 React 연동하려면
 
 ### 🔹 1. nodejs server만들기
 

@@ -4,4 +4,6 @@
 
 ## 📝 공부목록
 
-### 🔹 [코딩애플 강의](https://codingapple.com/)
+### 코딩애플 강의
+
+### JS_Developer 회고
